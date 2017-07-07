@@ -1,0 +1,43 @@
+@import "grid";
+@import "variables";
+
+.header-container{
+	@extend %pad-container;
+	@extend %mg-top;
+	&__search{
+		@extend %flex-btw;
+		@extend %mg-top;
+		border: 1px solid $plomo;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		span{
+			@extend %pad-right;
+		}
+	}
+	&__logo{
+		@extend %mg-top;
+		@extend %flex-center;
+	}
+	&__fecha{
+		@extend %mg-top;
+		@extend %flex-center;
+		span{
+			@extend %pad-right;
+		}
+	}
+	&__nav{
+		@extend %mg-top;
+		background-color: $amarillo;
+		padding: 10px;		
+		ul{
+			@extend %flex-btw;
+			li{
+				display: inline-block;			
+				a{
+					color: $blanco;
+				}
+			}
+		}
+	}
+}

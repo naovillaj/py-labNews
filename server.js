@@ -1,6 +1,9 @@
 var express = require("express");
 var api = require("./api");
 const app = express();
+var http = require('http');
+var server = http.createServer(app);
+var router = express.Router();
 
 app.get('/api/news/', function (req, res) {
     let news = api.news();
@@ -38,9 +41,40 @@ app.get('/api/categories/:category_id', function (req, res) {
     });
 });
 
+app.get('/', function(req, res) {
+
+  // Toggle between serving public/index.html
+  // and sending a text 'Ola Mundo!' to see
+  // nodemon restarting the server upon edit
+
+  res.sendfile('public/index.html');
+//  res.send('Ola Mundo!');
+
+});
+
 app.use('/', express.static('public'));
 
+// app.get('/', function(req, res) {
+//     res.sendfile('./public/index.html');
+// })
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log("Iniciando en puerto 3000");
+
+// app.listen(process.env.PORT || 3000, () => {
+//     console.log("Iniciando en puerto 3000");
+// });
+
+server.listen(3000, 'localhost');
+server.on('listening', function() {
+  console.log('Express server started on port %s at %s', server.address().port, server.address().address);
 });
+
+// const port = process.env.PORT || 3000;
+
+// app.listen(port, () => {
+//   console.log('Server running on port '+port+'!');
+// });
+
+
+// app.listen(3000, () => {
+//     console.log("Listening on 3000");
+// });
