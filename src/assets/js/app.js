@@ -3,7 +3,7 @@ const render = (root)=>{
     root.empty();
     const section = $('<section class="components"></section>');
     section.append(Header());
-    // section.append(News());
+    section.append(News());
     root.append(section);
 };
 const state = {

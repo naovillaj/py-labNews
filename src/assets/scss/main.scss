@@ -1,6 +1,8 @@
 @import "grid";
 @import "variables";
 
+//Header
+
 .header-container{
 	@extend %pad-container;
 	@extend %mg-top;
@@ -38,6 +40,21 @@
 					color: $blanco;
 				}
 			}
+		}
+	}
+}
+
+//News 
+
+.news-container{
+	@extend %pad-container;
+
+
+	&__princNews{
+		background-image: url("../img/news-0.png");
+		background-size: 80px 80px;
+		p{
+			color: $blanco;
 		}
 	}
 }
