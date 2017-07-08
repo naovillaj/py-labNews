@@ -63,7 +63,7 @@ app.use('/', express.static('public'));
 //     console.log("Iniciando en puerto 3000");
 // });
 
-server.listen(3000, 'localhost');
+server.listen(process.env.PORT || 3000, 'localhost');
 server.on('listening', function() {
   console.log('Express server started on port %s at %s', server.address().port, server.address().address);
 });
