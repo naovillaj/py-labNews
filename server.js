@@ -1,9 +1,9 @@
 var express = require("express");
 var api = require("./api");
 const app = express();
-var http = require('http');
-var server = http.createServer(app);
-var router = express.Router();
+// var http = require('http');
+// var server = http.createServer(app);
+// var router = express.Router();
 
 app.get('/api/news/', function (req, res) {
     let news = api.news();
@@ -41,16 +41,13 @@ app.get('/api/categories/:category_id', function (req, res) {
     });
 });
 
-app.get('/', function(req, res) {
+// app.get('/', function(req, res) {
 
-  // Toggle between serving public/index.html
-  // and sending a text 'Ola Mundo!' to see
-  // nodemon restarting the server upon edit
+  
 
-  res.sendfile('public/index.html');
-//  res.send('Ola Mundo!');
+//   res.sendfile('public/index.html');
 
-});
+// });
 
 app.use('/', express.static('public'));
 
