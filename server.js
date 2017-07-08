@@ -59,14 +59,14 @@ app.use('/', express.static('public'));
 // })
 
 
-// app.listen(process.env.PORT || 3000, () => {
-//     console.log("Iniciando en puerto 3000");
-// });
-
-server.listen(process.env.PORT || 3000, 'localhost');
-server.on('listening', function() {
-  console.log('Express server started on port %s at %s', server.address().port, server.address().address);
+app.listen(process.env.PORT || 3000, () => {
+    console.log("Iniciando en puerto 3000");
 });
+
+// server.listen(process.env.PORT || 3000, 'localhost');
+// server.on('listening', function() {
+//   console.log('Express server started on port %s at %s', server.address().port, server.address().address);
+// });
 
 // const port = process.env.PORT || 3000;
 
