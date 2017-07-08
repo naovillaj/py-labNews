@@ -15,7 +15,7 @@ const state = {
 
 $( _ => {
   
-    $.get('http://localhost:3000/api/news',(json) => {
+    $.get('api/news',(json) => {
         if(!json){
           return alert("error");
         }
