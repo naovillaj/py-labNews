@@ -47,14 +47,94 @@
 //News 
 
 .news-container{
-	@extend %pad-container;
-
-
+	@extend %pad-container;	
 	&__princNews{
-		background-image: url("../img/news-0.png");
-		background-size: 80px 80px;
-		p{
+		div{
+			background: url("../img/news-0.png") no-repeat;
+			background-size: cover;
+			height: 400px;
+			@extend %flex-end;
+			@extend %pad-box;
+			p{
+				color: $blanco;
+				width: 60%;
+			}
+		}
+	}	
+}
+
+.container-questions{
+	@extend %mg-top;
+	text-align: left;
+	height: 305px;
+	img{
+		width: 100%;
+		height: 221px;
+	}
+	.mg-right{
+		@extend %mg-right;
+	}
+
+	&__div{			
+		background-color: $plomo;
+		@extend %pad-box;
+		.letra-blanca{
 			color: $blanco;
+		}
+		.letra-amarilla{
+			color: $amarillo;
+		}
+	}
+}
+
+.world-container{
+	@extend %pad-container;	
+	@extend %mg-top;
+}
+.world-photos{
+	@extend %mg-top;
+	text-align: left;	
+	height: 300px;
+	.pad-right{
+		padding-right: 10px;	
+	}	
+	img{
+		width: 100%;
+	}
+	&__div{
+		background-color: $plomo;
+		@extend %pad-box;
+		.letra-blanca{
+			color: $blanco;
+		}
+		.letra-amarilla{
+			color: $amarillo;
+		}
+	}
+}
+
+.tech-container{
+	@extend %pad-container;	
+	@extend %mg-top;
+}
+.tech-photos{
+	@extend %mg-top;
+	text-align: left;	
+	height: 300px;
+	.pad-right{
+		padding-right: 10px;	
+	}	
+	img{
+		width: 100%;
+	}
+	&__div{
+		background-color: $plomo;
+		@extend %pad-box;
+		.letra-blanca{
+			color: $blanco;
+		}
+		.letra-amarilla{
+			color: $amarillo;
 		}
 	}
 }

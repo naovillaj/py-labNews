@@ -4,6 +4,8 @@ const render = (root)=>{
     const section = $('<section class="components"></section>');
     section.append(Header());
     section.append(News());
+    section.append(World());
+    section.append(Tecnologia());
     root.append(section);
 };
 const state = {
